@@ -1,6 +1,6 @@
 create table task_report(
 	TaskReportID int primary key auto_increment,
-	EmpID int not null,
+	EmpID bigint not null,
     ClientID int not null,
     ReportDate datetime not null,
     Description varchar(300),
@@ -8,6 +8,6 @@ create table task_report(
 	CreatedBy int,
 	UpdatedAt datetime,
 	UpdatedBy int,
-    foreign key(EmpID) references employee_details(EmpID),
-    foreign key(ClientID) references client_details(ClientID)
+    foreign key(ClientID) references client_details(ClientID),
+    foreign key(EmpID) references employee_details(EmpID)
 );
