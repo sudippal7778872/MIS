@@ -1,4 +1,3 @@
-
 create table employee_qualifications(
 	QualificationID int primary key auto_increment,
     Name varchar(20) not null,
